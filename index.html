@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Root & Roam • Plants & Cuttings</title>
+  <meta name="description" content="Root & Roam — starter plants, cuttings, and planty goods." />
+  <style>
+    :root{
+      --bg:#0f1724; --panel:#0b1220; --ink:#e9f2fb; --muted:#99a4b2; --accent:#8bffb7;
+      --accent2:#7dd3fc; --radius:16px; --pad:20px; --rim:rgba(255,255,255,.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:linear-gradient(180deg,#0a0f1e, #0f1724 40%, #0a1226 100%); color:var(--ink);}
+    a{color:var(--accent2)}
+    .wrap{max-width:1100px; margin:36px auto; padding:0 16px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:58px;height:58px;border-radius:14px; background:conic-gradient(from 0deg, var(--accent), #4ade80, var(--accent2)); display:grid;place-items:center; color:#052027; font-weight:900}
+    .logo span{filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}
+    .brand h1{font-size:22px; margin:0}
+    .brand small{color:var(--muted)}
+    nav a{color:var(--muted); text-decoration:none; font-weight:700; padding:10px 12px; border-radius:10px}
+    nav a:hover{background:var(--rim); color:var(--ink)}
+    .hero{margin-top:20px; display:grid; grid-template-columns:1.2fr .8fr; gap:18px}
+    .panel{background:var(--panel); border:1px solid var(--rim); border-radius:var(--radius); padding:var(--pad)}
+    h2{margin:0 0 8px}
+    p{margin:0 0 10px}
+    .lead{color:var(--muted)}
+    .btn{display:inline-block; padding:12px 16px; border-radius:12px; background:linear-gradient(90deg,var(--accent), var(--accent2)); color:#041a1e; font-weight:900; text-decoration:none}
+    .chip{display:inline-block; padding:8px 12px; border-radius:999px; background:var(--rim); color:var(--muted); font-weight:700}
+    .section{margin-top:18px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent); border:1px solid var(--rim); border-radius:14px; padding:14px}
+    .card h3{margin:0 0 4px}
+    .price{font-weight:900}
+    .tags{display:flex; gap:8px; flex-wrap:wrap}
+    .tags .chip{font-size:12px}
+    .card img{width:100%; height:180px; object-fit:cover; border-radius:10px; border:1px solid var(--rim)}
+    footer{margin:28px 0; color:var(--muted); text-align:center; font-size:13px}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr 1fr} }
+    @media (max-width:620px){ .grid{grid-template-columns:1fr} nav{display:none} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>R&R</span></div>
+        <div>
+          <h1>Root & Roam</h1>
+          <small>Starter plants • Cuttings • Planty goods</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="panel">
+        <h2>Grow your jungle, one starter at a time 🌿</h2>
+        <p class="lead">We propagate healthy, affordable plants and cuttings. Local pickup in Bluffton + shipping on select items. Follow along for drops and restocks.</p>
+        <div style="display:flex; gap:10px; align-items:center; margin-top:12px">
+          <a class="btn" href="#shop">Browse the Shop</a>
+          <span class="chip">New stock weekly</span>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3 style="margin-top:0">Quick Links</h3>
+        <p class="lead" style="margin-top:6px">Prefer to buy on a marketplace? Use these:</p>
+        <p style="margin:10px 0 6px"><strong>Etsy:</strong> <a href="#" id="etsyLink">etsy.com/shop/RootAndRoamPlants</a></p>
+        <p style="margin:6px 0"><strong>Instagram:</strong> <a href="#">@rootandroam</a></p>
+        <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:hello@rootandroam.example">hello@rootandroam.example</a></p>
+        <p class="lead" style="margin-top:10px">This site is static (no cart). Each product links to Etsy/PayPal/DM.</p>
+      </aside>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="panel">
+        <h2 style="margin-top:0">Shop</h2>
+        <p class="lead">Click a product to buy via Etsy or message for local pickup.</p>
+        <div class="grid" id="productGrid">
+          <!-- Example product cards (replace with your real items) -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1614594858840-65ac0c1a78c3?q=80&w=1200&auto=format&fit=crop" alt="Monstera deliciosa cutting" />
+            <h3>Monstera deliciosa — rooted cutting</h3>
+            <div class="price">$18</div>
+            <p class="lead">Starter size in 3–4" pot. Healthy roots.</p>
+            <div class="tags">
+              <span class="chip">Local pickup</span><span class="chip">Ships</span>
+            </div>
+            <p style="margin-top:10px"><a class="btn" href="#">Buy on Etsy</a></p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1614594858774-af98b8799af9?q=80&w=1200&auto=format&fit=crop" alt="Rhaphidophora tetrasperma" />
+            <h3>Mini Monstera (R. tetrasperma)</h3>
+            <div class="price">$22</div>
+            <p class="lead">Vigorous grower. 3" nursery pot.</p>
+            <div class="tags"><span class="chip">Local pickup</span></div>
+            <p style="margin-top:10px"><a class="btn" href="#">DM on Instagram</a></p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1604908177615-5c8ebd8c456f?q=80&w=1200&auto=format&fit=crop" alt="Syngonium podophyllum" />
+            <h3>Syngonium podophyllum — variegated</h3>
+            <div class="price">$15</div>
+            <p class="lead">Bright indirect light. Easy starter.</p>
+            <div class="tags"><span class="chip">Ships</span></div>
+            <p style="margin-top:10px"><a class="btn" href="#">Buy on Etsy</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="panel">
+        <h2 style="margin-top:0">About Root & Roam</h2>
+        <p class="lead">Hi! I’m Jay — I propagate and rehome happy, affordable plants. Every plant is acclimated and labeled with care tips. Pickup in Bluffton, SC or ask about shipping.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="panel">
+        <h2 style="margin-top:0">Contact</h2>
+        <p class="lead">Questions or bulk orders? Reach out:</p>
+        <p><a class="btn" href="mailto:hello@rootandroam.example?subject=Root%20and%20Roam%20Inquiry">Email me</a> &nbsp; <a class="btn" href="#">Message on Instagram</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Root & Roam • Built with ❤️ • Hosted on GitHub Pages
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

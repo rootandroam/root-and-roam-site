@@ -46,15 +46,69 @@
       font-size: 1.2em;
       font-family: 'Playfair Display', serif;
     }
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      margin-left: 20px;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: var(--terracotta);
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <div class="contact-menu">
+    <a href="#">Contact</a>
+    <div class="contact-dropdown">
+      <p>Email me at:</p>
+      <a href="mailto:Plants@rootandroamplants.com">Plants@rootandroamplants.com</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Contact dropdown styles */
+  .contact-menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .contact-dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #738b67; /* olive border */
+    border-radius: 10px;
+    padding: 10px 20px;
+    top: 28px;
+    left: -20px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .contact-dropdown a {
+    color: #738b67;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact-dropdown a:hover {
+    color: #d37c57; /* terracotta hover */
+  }
+
+  .contact-dropdown p {
+    margin: 0 0 4px 0;
+    font-size: 0.9em;
+    color: #3a2f29;
+  }
+
+  .contact-menu:hover .contact-dropdown {
+    display: block;
+    animation: fadeStay 2.5s ease forwards;
+  }
+
+  @keyframes fadeStay {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+</style>
+
     }
     main {
       padding: 80px 10%;

@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Root & Roam • Shop</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ===================== GLOBAL STYLES ===================== -->
   <style>
     :root {
       --beige: #f6f1ea;
@@ -13,13 +17,17 @@
       --dark: #3a2f29;
       --linen: url('https://www.transparenttextures.com/patterns/linen.png');
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--beige) var(--linen);
       color: var(--dark);
       line-height: 1.6;
     }
+
+    /* ===================== HEADER ===================== */
     header {
       display: flex;
       align-items: center;
@@ -28,11 +36,13 @@
       background-color: rgba(255,255,255,0.7);
       backdrop-filter: blur(4px);
     }
+
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .logo-placeholder {
       background-color: var(--olive);
       color: white;
@@ -46,139 +56,166 @@
       font-size: 1.2em;
       font-family: 'Playfair Display', serif;
     }
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
-  <div class="contact-menu">
-    <a href="#">Contact</a>
-    <div class="contact-dropdown">
-      <p>Email me at:</p>
-      <a href="mailto:Plants@rootandroamplants.com">Plants@rootandroamplants.com</a>
-    </div>
-  </div>
-</nav>
 
-<style>
-  /* Contact dropdown styles */
-  .contact-menu {
-    position: relative;
-    display: inline-block;
-  }
-
-  .contact-dropdown {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid #738b67; /* olive border */
-    border-radius: 10px;
-    padding: 10px 20px;
-    top: 28px;
-    left: -20px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  .contact-dropdown a {
-    color: #738b67;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .contact-dropdown a:hover {
-    color: #d37c57; /* terracotta hover */
-  }
-
-  .contact-dropdown p {
-    margin: 0 0 4px 0;
-    font-size: 0.9em;
-    color: #3a2f29;
-  }
-
-  .contact-menu:hover .contact-dropdown {
-    display: block;
-    animation: fadeStay 2.5s ease forwards;
-  }
-
-  @keyframes fadeStay {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; display: none; }
-  }
-</style>
-
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: var(--terracotta);
+    }
+
+    /* ===================== CONTACT DROPDOWN STYLES ===================== */
+    .contact-menu {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .contact-dropdown {
+      display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 2px solid var(--olive);
+      border-radius: 10px;
+      padding: 10px 20px;
+      top: 30px;
+      left: -20px;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .contact-dropdown a {
+      color: var(--olive);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-dropdown a:hover {
+      color: var(--terracotta);
+    }
+
+    .contact-dropdown p {
+      margin: 0 0 4px 0;
+      font-size: 0.9em;
+      color: var(--dark);
+    }
+
+    .contact-menu:hover .contact-dropdown {
+      display: block;
+      animation: fadeStay 2.5s ease forwards;
+    }
+
+    @keyframes fadeStay {
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; display: none; }
+    }
+
+    /* ===================== MAIN CONTENT ===================== */
     main {
       padding: 80px 10%;
       text-align: center;
     }
-    h1, h2, h3 {
+
+    h1, h2 {
       font-family: 'Playfair Display', serif;
       color: var(--dark);
     }
-    .divider {
-      width: 80px;
-      height: 4px;
-      background-color: var(--olive);
-      margin: 25px auto 60px;
-      border-radius: 2px;
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
+
+    /* ===================== SHOP PLACEHOLDER CARD ===================== */
     .shop-placeholder {
       background: rgba(255,255,255,0.7);
+      border: 3px solid var(--olive);
       border-radius: 16px;
       padding: 60px 20px;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 40px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: border-color 0.4s ease;
     }
+
+    .shop-placeholder:hover {
+      border-color: var(--terracotta);
+    }
+
     .shop-placeholder p {
       font-size: 1.4em;
       color: var(--olive);
       font-family: 'Playfair Display', serif;
     }
+
+    /* ===================== FOOTER ===================== */
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
       color: var(--dark);
     }
+
     footer a {
       color: var(--olive);
       text-decoration: none;
       font-weight: 600;
     }
+
     footer a:hover {
       color: var(--terracotta);
     }
   </style>
 </head>
+
 <body>
+  <!-- ===================== HEADER ===================== -->
   <header>
     <div class="logo">
       <div class="logo-placeholder">R&R</div>
       <h2>Root & Roam</h2>
     </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
+
+      <!-- CONTACT DROPDOWN -->
+      <div class="contact-menu">
+        <a href="#">Contact</a>
+        <div class="contact-dropdown">
+          <p>Email me at:</p>
+          <a href="mailto:Plants@rootandroamplants.com">Plants@rootandroamplants.com</a>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- ===================== MAIN SHOP SECTION ===================== -->
   <main>
     <h1>Shop Root & Roam</h1>
-    <div class="divider"></div>
-
     <div class="shop-placeholder">
       <p>🌱 New things are growing — check back soon!</p>
-      <br>
-      <!-- Paste Shopify embed code below -->
+      <!-- ===================== SHOPIFY EMBED START ===================== -->
+      <!-- Paste your Shopify Buy Button embed code right below this line -->
+      
+      <!-- ===================== SHOPIFY EMBED END ===================== -->
     </div>
   </main>
 
+  <!-- ===================== FOOTER ===================== -->
   <footer>
     <p>Follow along on <a href="https://instagram.com/rootandroamplants" target="_blank">@rootandroamplants</a></p>
   </footer>
 </body>
 </html>
+

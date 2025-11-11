@@ -55,27 +55,48 @@
     }
     nav a:hover { color: var(--terracotta); }
 
-    /* Contact dropdown */
-    .contact-menu { position: relative; display: inline-block; margin-left: 20px; vertical-align: middle; }
-    .contact-dropdown {
-      display: none;
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.9);
-      border: 2px solid var(--olive);
-      border-radius: 10px;
-      padding: 10px 20px;
-      top: 30px; left: -20px;
-      text-align: left;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .contact-dropdown a { color: var(--olive); font-weight: 600; text-decoration: none; }
-    .contact-dropdown a:hover { color: var(--terracotta); }
-    .contact-menu:hover .contact-dropdown {
-      display: block;
-      animation: fadeStay 2.5s ease forwards;
-    }
+   /* Contact dropdown */
+.contact-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: baseline; /* aligns Contact evenly with Home & Shop */
+}
+
+.contact-menu > a {
+  display: inline-block;
+  padding-top: 0; /* remove extra top spacing */
+  line-height: 1; /* centers text visually */
+}
+
+.contact-dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--olive);
+  border-radius: 10px;
+  padding: 10px 20px;
+  top: 30px;
+  left: -20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.contact-dropdown a {
+  color: var(--olive);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-dropdown a:hover { color: var(--terracotta); }
+
+.contact-menu:hover .contact-dropdown {
+  display: block;
+  animation: fadeStay 2.5s ease forwards;
+}
+
     @keyframes fadeStay {
       0% { opacity: 0; }
       20% { opacity: 1; }
